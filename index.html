@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.85250483.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, target-densityDpi=device-dpi, minimal-ui"
+    />
+    <title>Raj Varu</title>
+    <meta property="og:title" content="Raj Varu" />
+    <meta name="description" content="Raj Varu 3D Portfolio" />
+    <meta property="og:description" content="Raj Varu 3D Portfolio" />
+    <meta
+      property="og:url"
+      content="https://mdamiruddin-3dportfolio.vercel.app"
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/MdAmiruddin/mdamiruddin-3dportfolio/main/public/social/screenshot.png"
+    />
+    <meta name="twitter:card" content="summary" />
+    <script type="module" crossorigin src="/assets/index.cdb370ad.js"></script>
+    <link rel="stylesheet" href="/assets/index.5a548ef5.css">
+  </head>
+  <body class="light-theme">
+    <div class="experience">
+      <canvas class="experience-canvas"></canvas>
+    </div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="preloader-wrapper">
+        <div class="loading">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page" asscroll-container>
+      <div class="toggle-bar">
+        <div class="sun-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+            <path
+              fill="currentColor"
+              d="M12 5Q11.575 5 11.288 4.712Q11 4.425 11 4V2Q11 1.575 11.288 1.287Q11.575 1 12 1Q12.425 1 12.713 1.287Q13 1.575 13 2V4Q13 4.425 12.713 4.712Q12.425 5 12 5ZM16.95 7.05Q16.675 6.775 16.675 6.362Q16.675 5.95 16.95 5.65L18.35 4.225Q18.65 3.925 19.062 3.925Q19.475 3.925 19.775 4.225Q20.05 4.5 20.05 4.925Q20.05 5.35 19.775 5.625L18.35 7.05Q18.075 7.325 17.65 7.325Q17.225 7.325 16.95 7.05ZM20 13Q19.575 13 19.288 12.712Q19 12.425 19 12Q19 11.575 19.288 11.287Q19.575 11 20 11H22Q22.425 11 22.712 11.287Q23 11.575 23 12Q23 12.425 22.712 12.712Q22.425 13 22 13ZM12 23Q11.575 23 11.288 22.712Q11 22.425 11 22V20Q11 19.575 11.288 19.288Q11.575 19 12 19Q12.425 19 12.713 19.288Q13 19.575 13 20V22Q13 22.425 12.713 22.712Q12.425 23 12 23ZM5.65 7.05 4.225 5.65Q3.925 5.35 3.925 4.925Q3.925 4.5 4.225 4.225Q4.5 3.95 4.925 3.95Q5.35 3.95 5.625 4.225L7.05 5.65Q7.325 5.925 7.325 6.35Q7.325 6.775 7.05 7.05Q6.75 7.325 6.35 7.325Q5.95 7.325 5.65 7.05ZM18.35 19.775 16.95 18.35Q16.675 18.05 16.675 17.638Q16.675 17.225 16.95 16.95Q17.225 16.675 17.638 16.675Q18.05 16.675 18.35 16.95L19.775 18.35Q20.075 18.625 20.062 19.05Q20.05 19.475 19.775 19.775Q19.475 20.075 19.05 20.075Q18.625 20.075 18.35 19.775ZM2 13Q1.575 13 1.288 12.712Q1 12.425 1 12Q1 11.575 1.288 11.287Q1.575 11 2 11H4Q4.425 11 4.713 11.287Q5 11.575 5 12Q5 12.425 4.713 12.712Q4.425 13 4 13ZM4.225 19.775Q3.95 19.5 3.95 19.075Q3.95 18.65 4.225 18.375L5.65 16.95Q5.925 16.675 6.338 16.675Q6.75 16.675 7.05 16.95Q7.35 17.25 7.35 17.663Q7.35 18.075 7.05 18.375L5.65 19.775Q5.35 20.075 4.925 20.075Q4.5 20.075 4.225 19.775ZM12 18Q9.5 18 7.75 16.25Q6 14.5 6 12Q6 9.5 7.75 7.75Q9.5 6 12 6Q14.5 6 16.25 7.75Q18 9.5 18 12Q18 14.5 16.25 16.25Q14.5 18 12 18ZM12 16Q13.65 16 14.825 14.825Q16 13.65 16 12Q16 10.35 14.825 9.175Q13.65 8 12 8Q10.35 8 9.175 9.175Q8 10.35 8 12Q8 13.65 9.175 14.825Q10.35 16 12 16Z"
+            />
+          </svg>
+        </div>
+        <button class="toggle-button">
+          <div class="toggle-circle"></div>
+        </button>
+        <div class="moon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+            <path
+              fill="currentColor"
+              d="M12 21Q8.25 21 5.625 18.375Q3 15.75 3 12Q3 8.25 5.625 5.625Q8.25 3 12 3Q12.35 3 12.688 3.025Q13.025 3.05 13.35 3.1Q12.325 3.825 11.713 4.987Q11.1 6.15 11.1 7.5Q11.1 9.75 12.675 11.325Q14.25 12.9 16.5 12.9Q17.875 12.9 19.025 12.287Q20.175 11.675 20.9 10.65Q20.95 10.975 20.975 11.312Q21 11.65 21 12Q21 15.75 18.375 18.375Q15.75 21 12 21ZM12 19Q14.2 19 15.95 17.788Q17.7 16.575 18.5 14.625Q18 14.75 17.5 14.825Q17 14.9 16.5 14.9Q13.425 14.9 11.262 12.738Q9.1 10.575 9.1 7.5Q9.1 7 9.175 6.5Q9.25 6 9.375 5.5Q7.425 6.3 6.213 8.05Q5 9.8 5 12Q5 14.9 7.05 16.95Q9.1 19 12 19ZM11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Z"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div class="page-wrapper" asscroll>
+        <section class="hero">
+          <div class="hero-wrapper">
+            <!-- Intro Stuff -->
+            <div class="intro-text">Welcome to my portfolio!</div>
+            <div class="arrow-svg-wrapper">
+              ~
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+                <path
+                  fill="currentColor"
+                  d="M12 14.95q-.2 0-.375-.063-.175-.062-.325-.212L6.675 10.05q-.275-.275-.262-.688.012-.412.287-.687.275-.275.7-.275.425 0 .7.275l3.9 3.9 3.925-3.925q.275-.275.688-.263.412.013.687.288.275.275.275.7 0 .425-.275.7l-4.6 4.6q-.15.15-.325.212-.175.063-.375.063Z"
+                />
+              </svg>
+            </div>
+
+            <div class="hero-main">
+              <h1 class="hero-main-title">Raj Varu</h1>
+              <p class="hero-main-description">MERN Stack developer</p>
+            </div>
+
+            <div class="hero-second">
+              <p class="hero-second-subheading first-sub">Raj Varu</p>
+              <p class="hero-second-subheading second-sub">Portfolio</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="first-move section-margin"></div>
+
+        <section class="first-section section left">
+          <div class="progress-wrapper progress-bar-wrapper-left">
+            <div class="progress-bar"></div>
+          </div>
+
+          <div class="section-intro-wrapper">
+            <h1 class="section-title">
+              <span class="section-title-text">About Me</span>
+              <div class="section-title-decoration styleOne"></div>
+              <div class="section-title-decoration styleTwo"></div>
+              <div class="section-title-decoration styleThree"></div>
+            </h1>
+            <span class="section-number">01</span>
+          </div>
+
+          <div class="section-detail-wrapper">
+            <!-- <h3 class="section-heading">Hello!</h3> -->
+            <p class="section-text">
+              My name is Raj Varu and I have completed my MERN Stack development
+              cource from Digital Lync. My passion lies in developing
+              challenging and beautiful websites and I am actively seeking
+              internships or entry-level positions within the field.
+            </p>
+            <p class="section-text">
+              I have a deep foundational understanding of Web application from
+              the initial stage of UI/UX designing to developing front-end and
+              back-end. I am well-versed in active technologies like three.js
+              gsap(Web animation library) and Figma(UI/UX) design tool.
+            </p>
+            <p class="section-text">
+              I am always looking for an opportunity to demonstrate my knowledge
+              of website development and to collaborate with others in the
+              field. I am eager to make a contribution to any webapp
+              initiatives, and I believe my technical expertise combined with my
+              willingness to learn and act quickly make me an excellent
+              candidate for any webdevelopment related positions.
+            </p>
+            <p class="section-text">I love creating WebApp's ✌️.</p>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <h1 id="education">EDUCATION</h1>
+            <br />
+            <br />
+            <br />
+            <p>
+              <img
+                src="data:image/jpeg;base64,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"
+                alt="Rungta College Of Engineering & Technology"
+              />
+            </p>
+            <br />
+            <br />
+            <h3
+              id="-government-college-of-engineering-and-leather-technology-https-www-linkedin-com-school-gcelt-trk-public_profile_school-"
+            >
+              <a href="https://www.rungta.ac.in/"
+                >Rungta College Of Engineering & Technology</a
+              >
+            </h3>
+            <br />
+            <br />
+            <h4 id="bachelor-of-technology-in-leather-technology">
+              Bachelor of Computer Applications
+            </h4>
+            <br />
+            <br />
+            <p>80.57%</p>
+            <br />
+            <p>[ 2019 - 2022 ]</p>
+          </div>
+        </section>
+
+        <div class="second-move section-margin"></div>
+
+        <section class="second-section section right">
+          <div class="progress-wrapper progress-bar-wrapper-right">
+            <div class="progress-bar blue-background"></div>
+          </div>
+
+          <div class="section-intro-wrapper blue-text blue-border">
+            <h1 class="section-title blue-text blue-border">
+              <span class="section-title-text blue-text">My Projects</span>
+              <div class="section-title-decoration styleOne blue-border"></div>
+              <div class="section-title-decoration styleTwo blue-border"></div>
+              <div
+                class="section-title-decoration styleThree blue-background blue-border"
+              ></div>
+            </h1>
+            <span class="section-number blue-text">02</span>
+          </div>
+
+          <div class="section-detail-wrapper">
+            <h3 class="section-heading">
+              Ecommerce Application using MERN Stack
+            </h3>
+            <p class="section-text">
+              This WebApp was made using various tecnologies like react js node
+              js express js jwttoken braintrree paymentgateway
+            </p>
+            <p class="section-text"></p>
+            <br />
+            <p>
+              <picture>
+                <img src="/assets/ecommerce.2dcf3566.png" width="500"
+              /></picture>
+            </p>
+            <br />
+            <p>
+              <a
+                href="https://github.com/Raj-varu/Ecommerce-MERN"
+                title="Ecommerce App"
+                >Github Source code<img
+                  src="https://static.licdn.com/aero-v1/sc/h/8w0vew433o9nluoruq9k5eqy"
+                  alt="External link"
+              /></a>
+            </p>
+
+            <h3 class="section-heading">Social media application</h3>
+            <p class="section-text">
+              Developed a dynamic and user-friendly social media platform using
+              the MERN (MongoDB, Express.js, React, Node.js) stack. Implemented
+              robust authentication, real-time updates, and a responsive UI.
+              Leveraged my full-stack expertise to create seamless interactions,
+              ensuring an engaging user experience. Contributed to design,
+              development, and deployment phases for a polished final product
+            </p>
+            <br />
+            <p>
+              <a href="https://github.com/Raj-varu/Social-Media"
+                >Github Source Code<img
+                  src="https://static.licdn.com/aero-v1/sc/h/8w0vew433o9nluoruq9k5eqy"
+                  alt="External link"
+              /></a>
+            </p>
+            <p>
+              <picture>
+                <img src="/assets/socialmedia.0b21da3c.png" width="500"
+              /></picture>
+            </p>
+
+            <h3 class="section-heading">Dashboard using React</h3>
+            <p class="section-text">
+              Engineered an advanced admin dashboard with React, showcasing
+              proficiency in front-end development. Implemented intuitive data
+              visualisations, streamlined user interactions, and responsive
+              design. Leveraged React's component-based architecture to create a
+              scalable and maintainable solution. Contributed to enhancing the
+              platform's overall functionality and user management,
+              demonstrating versatility in React development.
+            </p>
+            <p>
+              <picture>
+                <img src="/assets/dashboard.2e53a3ad.png" width="500" />
+              </picture>
+            </p>
+            <br />
+
+            <p>
+              <a
+                href="https://dashboard-seven-flame.vercel.app/"
+                title="dashboard"
+                >See Project<img
+                  src="https://static.licdn.com/aero-v1/sc/h/8w0vew433o9nluoruq9k5eqy"
+                  alt="External link"
+              /></a>
+            </p>
+            <p>
+              <a href="https://github.com/Raj-varu/Dashboard"
+                >Github Source Code<img
+                  src="https://static.licdn.com/aero-v1/sc/h/8w0vew433o9nluoruq9k5eqy"
+                  alt="External link"
+              /></a>
+            </p>
+          </div>
+        </section>
+
+        <div class="third-move section-margin"></div>
+
+        <div class="second-move section-margin"></div>
+
+        <section class="second-section section right">
+          <div class="progress-wrapper progress-bar-wrapper-right">
+            <div class="progress-bar blue-background"></div>
+          </div>
+
+          <div class="section-intro-wrapper blue-text blue-border">
+            <h1 class="section-title blue-text blue-border">
+              <span class="section-title-text blue-text">CONTACT</span>
+              <div class="section-title-decoration styleOne blue-border"></div>
+              <div class="section-title-decoration styleTwo blue-border"></div>
+              <div
+                class="section-title-decoration styleThree blue-background blue-border"
+              ></div>
+            </h1>
+            <span class="section-number blue-text">04</span>
+          </div>
+
+          <div class="section-detail-wrapper">
+            <h3 class="section-heading">Linkedin</h3>
+            <p class="section-text">
+              If you'd like to get in touch, please feel free to connect with me
+              on LinkedIn. On LinkedIn, I am active in discussions about
+              software developments. I am available for interviews and I look
+              forward to connecting with other professionals in the web
+              development field.
+            </p>
+            <br />
+            <p>
+              <a href="https://www.linkedin.com/in/raj-varu-719481281/"
+                ><img
+                  src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&amp;logoColor=white"
+                  alt="LinkedIn"
+              /></a>
+            </p>
+            <h3 class="section-heading">Github</h3>
+            <p class="section-text">
+              I am an aspiring webdevelopment student and avid tech enthusiast.
+              I can be found on Github, where I participate in the open source
+              community. I am always searching for different ways to learn and
+              share knowledge pertaining to webdevelopment. I stay up to date
+              with the newest technology, trends, and technology advancements.
+              If you are looking to collaborate with someone who has a passion
+              for learning and innovation, then you've come to the right place!
+            </p>
+            <br />
+
+            <p>
+              <a href="https://github.com/Raj-varu"
+                ><img
+                  src="https://img.shields.io/badge/Github-12100E?logo=github&amp;logoColor=white"
+                  alt="Medium"
+              /></a>
+            </p>
+            <h3 class="section-heading">Contact info</h3>
+            <p class="section-text">My Email : rajvaru2001@gmail.com</p>
+            <p class="section-text">My Phone : +91 8305871639</p>
+          </div>
+        </section>
+        <footer class="footer">
+          <span class="footer__copyright"
+            >Copyright &copy; 2023 - Raj Varu</span
+          >
+        </footer>
+        <br /><br />
+      </div>
+    </div>
+    
+  </body>
+</html>
